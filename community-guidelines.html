@@ -1,78 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TempelChat Community Guidelines</title>
+  <meta name="description" content="Community Guidelines for TempelChat – keeping our space respectful, safe, and fun for everyone.">
   <style>
+    :root {
+      --light-bg: #f9f9f9;
+      --light-text: #333;
+      --light-section: #fff;
+      --light-accent: #2d89ef;
+
+      --dark-bg: #121212;
+      --dark-text: #f0f0f0;
+      --dark-section: #1e1e1e;
+      --dark-accent: #58a6ff;
+    }
+
+    html[data-theme='light'] {
+      --bg: var(--light-bg);
+      --text: var(--light-text);
+      --section: var(--light-section);
+      --accent: var(--light-accent);
+    }
+
+    html[data-theme='dark'] {
+      --bg: var(--dark-bg);
+      --text: var(--dark-text);
+      --section: var(--dark-section);
+      --accent: var(--dark-accent);
+    }
+
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0 20px 60px;
     }
-    h1, h2 {
-      color: #2d89ef;
+
+    header, footer {
+      background-color: var(--section);
+      padding: 15px 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+
+    header h1, footer p {
+      margin: 0;
+    }
+
+    header h1 {
+      color: var(--accent);
+      font-size: 24px;
+    }
+
+    .theme-toggle {
+      float: right;
+      background: none;
+      border: 1px solid var(--accent);
+      padding: 5px 12px;
+      border-radius: 5px;
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
     section {
-      background: #fff;
-      padding: 20px 30px;
-      border-radius: 8px;
+      background-color: var(--section);
+      padding: 30px;
+      border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       margin-bottom: 40px;
     }
+
+    h2 {
+      color: var(--accent);
+    }
+
     ul {
       padding-left: 20px;
     }
+
     li {
       margin-bottom: 10px;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text);
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <section>
-    <h1>TempelChat Community Guidelines</h1>
-    <p>Welcome to the TempelChat community! To keep our platform safe, respectful, and fun for everyone, please follow these guidelines:</p>
+  <header>
+    <h1>TempelChat</h1>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>
 
-    <h2>1. Be Respectful</h2>
-    <ul>
-      <li>Treat others with kindness and courtesy.</li>
-      <li>No hate speech, discrimination, or harassment.</li>
-      <li>Respect differing opinions without attacking others.</li>
-    </ul>
+  <main>
+    <section>
+      <h1>Community Guidelines</h1>
+      <p>Welcome to the TempelChat community! To keep our platform safe, respectful, and fun for everyone, please follow these guidelines:</p>
 
-    <h2>2. Keep It Clean</h2>
-    <ul>
-      <li>No NSFW, violent, or obscene content.</li>
-      <li>Avoid excessive profanity or graphic language.</li>
-      <li>Use appropriate usernames and profile pictures.</li>
-    </ul>
+      <h2>1. Be Respectful</h2>
+      <ul>
+        <li>Treat others with kindness and courtesy.</li>
+        <li>No hate speech, discrimination, or harassment.</li>
+        <li>Respect differing opinions without attacking others.</li>
+      </ul>
 
-    <h2>3. No Spam or Self-Promotion</h2>
-    <ul>
-      <li>Don’t flood chats or promote unrelated content.</li>
-      <li>No unsolicited advertising, links, or promotions.</li>
-      <li>Use designated areas for promotion if available.</li>
-    </ul>
+      <h2>2. Keep It Clean</h2>
+      <ul>
+        <li>No NSFW, violent, or obscene content.</li>
+        <li>Avoid excessive profanity or graphic language.</li>
+        <li>Use appropriate usernames and profile pictures.</li>
+      </ul>
 
-    <h2>4. Protect Privacy</h2>
-    <ul>
-      <li>Do not share personal or private information (yours or others’).</li>
-      <li>Report any suspicious behavior immediately.</li>
-    </ul>
+      <h2>3. No Spam or Self-Promotion</h2>
+      <ul>
+        <li>Don’t flood chats or promote unrelated content.</li>
+        <li>No unsolicited advertising, links, or promotions.</li>
+        <li>Use designated areas for promotion if available.</li>
+      </ul>
 
-    <h2>5. Follow the Law</h2>
-    <ul>
-      <li>No illegal content, discussions, or activity.</li>
-      <li>Report any illegal behavior to moderators or admins.</li>
-    </ul>
+      <h2>4. Protect Privacy</h2>
+      <ul>
+        <li>Do not share personal or private information (yours or others’).</li>
+        <li>Report any suspicious behavior immediately.</li>
+      </ul>
 
-    <h2>6. Moderation</h2>
-    <ul>
-      <li>Admins and moderators may take action to enforce these rules.</li>
-      <li>Respect their decisions and cooperate with enforcement.</li>
-    </ul>
+      <h2>5. Follow the Law</h2>
+      <ul>
+        <li>No illegal content, discussions, or activity.</li>
+        <li>Report any illegal behavior to moderators or admins.</li>
+      </ul>
 
-    <p>By using TempelChat, you agree to follow these community guidelines. Let’s build a welcoming and respectful space together!</p>
-  </section>
+      <h2>6. Moderation</h2>
+      <ul>
+        <li>Admins and moderators may take action to enforce these rules.</li>
+        <li>Respect their decisions and cooperate with enforcement.</li>
+      </ul>
+
+      <p>By using TempelChat, you agree to follow these community guidelines. Let’s build a welcoming and respectful space together!</p>
+      <a class="back-link" href="https://tempelchat.github.io">← Back to TempelChat</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TempelChat. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme", currentTheme === "light" ? "dark" : "light");
+    }
+  </script>
 </body>
 </html>
